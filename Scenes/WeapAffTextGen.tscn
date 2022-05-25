@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/WeapAffTextGen.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/CopiedText.tscn" type="PackedScene" id=2]
+
+[node name="WeapAffTextGen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TB_WeaponParamIDLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 75.0
+margin_right = 102.0
+margin_bottom = 123.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Base Weapon
+Param ID (No
+Final Four Digits)"
+align = 1
+
+[node name="TB_WeaponParamID" type="TextEdit" parent="TB_WeaponParamIDLabel"]
+margin_left = 107.0
+margin_top = 8.0
+margin_right = 303.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "1000"
+
+[node name="TB_WeaponNameLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 141.0
+margin_right = 94.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Weapon
+Name"
+align = 1
+
+[node name="TB_WeaponName" type="TextEdit" parent="TB_WeaponNameLabel"]
+margin_left = 106.0
+margin_top = -2.0
+margin_right = 304.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Longsword"
+
+[node name="TB_WeaponNamePrefixLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 214.0
+margin_right = 94.0
+margin_bottom = 245.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Prefix
+(Put Space
+at End)"
+align = 1
+
+[node name="TB_WeaponNamePrefix" type="TextEdit" parent="TB_WeaponNamePrefixLabel"]
+margin_left = 106.0
+margin_top = -2.0
+margin_right = 304.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 13, 49 )
+
+[node name="TextOutput" type="TextEdit" parent="."]
+margin_left = 401.0
+margin_top = 32.0
+margin_right = 783.0
+margin_bottom = 579.0
+text = "Output Text"
+
+[node name="GenerateAffinityTitleButton" type="Button" parent="."]
+margin_left = 111.0
+margin_top = 290.0
+margin_right = 294.0
+margin_bottom = 310.0
+text = "Generate Affinity Title Text"
+
+[node name="CopiedText" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 161, 326 )
+
+[connection signal="visibility_changed" from="." to="." method="_on_WeapAffTextGen_visibility_changed"]
+[connection signal="text_changed" from="TB_WeaponParamIDLabel/TB_WeaponParamID" to="." method="_on_TB_WeaponParamID_text_changed"]
+[connection signal="pressed" from="GenerateAffinityTitleButton" to="." method="_on_GenerateAffinityTitleButton_pressed"]
