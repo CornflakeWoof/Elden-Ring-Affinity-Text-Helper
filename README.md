@@ -1,7 +1,7 @@
 # Elden Ring Affinity Text Helper
 Small utility made in Godot Engine to help quickly create text for weaponry and their affinities in Elden Ring.
 
-This utility does expect there relevant MSGBNDs have already been opened with Yabber - when ERATH generates text, the result is automatically copied to the clipboard for easy pasting into a MSGBND's converted XML file.
+This utility does expect the relevant MSGBNDs have already been opened with Yabber - when ERATH generates text, the result is automatically copied to the clipboard for easy pasting into a MSGBND's converted XML file.
 
 This is so basic I know I'm not a programmer I'm sorryyyy TT_TT
 
