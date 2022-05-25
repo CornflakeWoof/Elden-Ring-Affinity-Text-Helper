@@ -31,16 +31,18 @@ margin_top = 141.0
 margin_right = 94.0
 margin_bottom = 172.0
 rect_pivot_offset = Vector2( 106, 47 )
-text = "Description Text"
+text = "Description
+Text"
 align = 1
 
 [node name="TB_Description" type="TextEdit" parent="TB_DescriptionLabel"]
-margin_left = 106.0
+margin_left = 89.0
 margin_top = -2.0
-margin_right = 376.0
+margin_right = 384.0
 margin_bottom = 264.0
 rect_pivot_offset = Vector2( 13, 49 )
 text = "Longsword"
+wrap_enabled = true
 
 [node name="TextOutput" type="TextEdit" parent="."]
 margin_left = 401.0
