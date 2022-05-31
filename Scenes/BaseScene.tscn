@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/BaseScene.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/WeapAffTextGen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/WeapAffDescGen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/ArmorTextGen.tscn" type="PackedScene" id=4]
 
 [node name="BaseScene" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,6 +19,9 @@ text = "Weapon Title Affinity Generator"
 visible = false
 
 [node name="WeapAffDescGen" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="ArmorAffDescGen" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [connection signal="item_selected" from="GeneratorMode" to="." method="_on_GeneratorMode_item_selected"]

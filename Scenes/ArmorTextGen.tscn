@@ -1,0 +1,142 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ArmorAffDescGen.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/CopiedText.tscn" type="PackedScene" id=2]
+
+[node name="ArmorAffDescGen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TB_ArmorParamIDLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 75.0
+margin_right = 102.0
+margin_bottom = 123.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Base Armor
+Param ID (No
+Final Four Digits)"
+align = 1
+
+[node name="TB_ArmorParamID" type="TextEdit" parent="TB_ArmorParamIDLabel"]
+margin_left = 107.0
+margin_top = 8.0
+margin_right = 303.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "1000"
+
+[node name="TB_ArmorParamMainName" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 138.0
+margin_right = 114.0
+margin_bottom = 186.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Armor Name"
+align = 1
+
+[node name="TB_ArmorName" type="TextEdit" parent="TB_ArmorParamMainName"]
+margin_left = 107.0
+margin_top = 8.0
+margin_right = 303.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Iron"
+
+[node name="TB_ArmorParamNamesLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 189.0
+margin_right = 89.0
+margin_bottom = 237.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Part
+Names"
+align = 1
+
+[node name="TB_ArmorHead" type="TextEdit" parent="TB_ArmorParamNamesLabel"]
+margin_left = 89.0
+margin_top = 8.0
+margin_right = 145.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Helm"
+wrap_enabled = true
+
+[node name="TB_ArmorChest" type="TextEdit" parent="TB_ArmorParamNamesLabel"]
+margin_left = 151.0
+margin_top = 8.0
+margin_right = 211.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Armor"
+wrap_enabled = true
+
+[node name="TB_ArmorLegs" type="TextEdit" parent="TB_ArmorParamNamesLabel"]
+margin_left = 298.0
+margin_top = 8.0
+margin_right = 372.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Greaves"
+wrap_enabled = true
+
+[node name="TB_ArmorHands" type="TextEdit" parent="TB_ArmorParamNamesLabel"]
+margin_left = 219.0
+margin_top = 8.0
+margin_right = 291.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "Gauntlets"
+wrap_enabled = true
+
+[node name="TB_DescriptionLabel" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 254.0
+margin_right = 94.0
+margin_bottom = 353.0
+rect_pivot_offset = Vector2( 106, 47 )
+text = "Description
+Text (Starts 
+with 'Helm'/
+'Greaves'/
+'Armor' /
+'Gauntlets'"
+align = 1
+
+[node name="TB_Description" type="TextEdit" parent="TB_DescriptionLabel"]
+margin_left = 89.0
+margin_top = -2.0
+margin_right = 384.0
+margin_bottom = 264.0
+rect_pivot_offset = Vector2( 13, 49 )
+text = "of a Soldier.
+
+Provides solid protection."
+wrap_enabled = true
+
+[node name="TextOutput" type="TextEdit" parent="."]
+margin_left = 401.0
+margin_top = 32.0
+margin_right = 783.0
+margin_bottom = 579.0
+text = "Output Text"
+
+[node name="GenerateAffinityTitleButton" type="Button" parent="."]
+margin_left = 111.0
+margin_top = 526.0
+margin_right = 340.0
+margin_bottom = 546.0
+text = "Generate Armor Description"
+
+[node name="GenerateAffinityTitleButton2" type="Button" parent="."]
+margin_left = 111.0
+margin_top = 555.0
+margin_right = 340.0
+margin_bottom = 575.0
+text = "Generate Armor Title"
+
+[node name="CopiedText" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 189, 569 )
+
+[connection signal="pressed" from="GenerateAffinityTitleButton" to="." method="_on_GenerateAffinityTitleButton_pressed"]
+[connection signal="pressed" from="GenerateAffinityTitleButton2" to="." method="_on_GenerateAffinityTitleButton2_pressed"]

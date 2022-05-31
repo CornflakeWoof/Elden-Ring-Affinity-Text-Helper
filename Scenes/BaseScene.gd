@@ -14,6 +14,7 @@ func _ready():
 	
 	$GeneratorMode.add_item("Weapon Title Affinity Generator", 2)
 	$GeneratorMode.add_item("Weapon Description Affinity Generator", 3)
+	$GeneratorMode.add_item("Armor Description Generator", 4)
 	
 	$WeapAffTextGen.visible = true
 	pass # Replace with function body.
@@ -33,6 +34,8 @@ func _on_GeneratorMode_item_selected(index):
 	match index:
 		1:
 			$WeapAffDescGen.visible = true
+		2:
+			$ArmorAffDescGen.visible = true
 		_:
 			$WeapAffTextGen.visible = true
 	
