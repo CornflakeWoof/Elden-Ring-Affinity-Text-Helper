@@ -136,7 +136,7 @@ text = "Generate Armor Title"
 
 [node name="CopiedText" parent="." instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 189, 569 )
+position = Vector2( 14, 561 )
 
 [connection signal="pressed" from="GenerateAffinityTitleButton" to="." method="_on_GenerateAffinityTitleButton_pressed"]
 [connection signal="pressed" from="GenerateAffinityTitleButton2" to="." method="_on_GenerateAffinityTitleButton2_pressed"]
