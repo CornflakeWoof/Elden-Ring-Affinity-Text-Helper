@@ -27,6 +27,7 @@ func _ready():
 func hideallscenes():
 	$WeapAffTextGen.visible = false
 	$WeapAffDescGen.visible = false
+	$ArmorAffDescGen.visible = false
 
 func _on_GeneratorMode_item_selected(index):
 	print(index)
